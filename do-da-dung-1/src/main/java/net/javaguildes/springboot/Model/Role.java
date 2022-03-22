@@ -13,14 +13,14 @@ public class Role {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-	private String role_name;
+	private String rolename;
 	
 	public Role() {}
 	
-	public Role(String role_name) {
+	public Role(String role_ame) {
 		super();
 		
-		this.role_name = role_name;
+		this.rolename = rolename;
 	}
 	
 	
@@ -31,10 +31,10 @@ public class Role {
 		this.id = id;
 	}
 	public String getRole_name() {
-		return role_name;
+		return rolename;
 	}
 	public void setRole_name(String role_name) {
-		this.role_name = role_name;
+		this.rolename = role_name;
 	}
 	
 	

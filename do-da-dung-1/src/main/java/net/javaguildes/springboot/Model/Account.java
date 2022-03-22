@@ -24,7 +24,7 @@ public class Account {
     @JoinColumn(name = "role_id",referencedColumnName = "id")
 	private Role role_id;
 	@Column(nullable = false)
-	private Boolean is_blocked;
+	private Boolean isblocked;
 	private String name;
 	private String address;
 	private String phone;
@@ -32,11 +32,11 @@ public class Account {
 	@Column(nullable = false, name = "birthday", updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
 	private Timestamp birthday;
 	@Column(nullable = false, name = "created_at", updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-	private Timestamp created_at;
+	private Timestamp createdat;
 	@Column(nullable = false, name = "deleted_at", updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-	private Timestamp deleted_at;
+	private Timestamp deletedat;
 	@Column(nullable = false, name = "updated_at", updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-	private Timestamp updated_at;
+	private Timestamp updatedat;
 	/////////
 	public Account() {
 		
@@ -54,15 +54,15 @@ public class Account {
 		this.username = username;
 		this.password = password;
 		this.role_id = role_id;
-		this.is_blocked = is_blocked;
+		this.isblocked = is_blocked;
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
 		this.email = email;
 		this.birthday = birthday;
-		this.created_at = created_at;
-		this.deleted_at = deleted_at;
-		this.updated_at = updated_at;
+		this.createdat = created_at;
+		this.deletedat = deleted_at;
+		this.updatedat = updated_at;
 	}
 	
 	/////////
@@ -92,10 +92,10 @@ public class Account {
 		this.role_id = role_id;
 	}
 	public Boolean getIs_blocked() {
-		return is_blocked;
+		return isblocked;
 	}
 	public void setIs_blocked(Boolean is_blocked) {
-		this.is_blocked = is_blocked;
+		this.isblocked = is_blocked;
 	}
 	public String getName() {
 		return name;
@@ -128,22 +128,22 @@ public class Account {
 		this.birthday = birthday;
 	}
 	public Timestamp getCreated_at() {
-		return created_at;
+		return createdat;
 	}
 	public void setCreated_at(Timestamp created_at) {
-		this.created_at = created_at;
+		this.createdat = created_at;
 	}
 	public Timestamp getDeleted_at() {
-		return deleted_at;
+		return deletedat;
 	}
 	public void setDeleted_at(Timestamp deleted_at) {
-		this.deleted_at = deleted_at;
+		this.deletedat = deleted_at;
 	}
 	public Timestamp getUpdated_at() {
-		return updated_at;
+		return updatedat;
 	}
 	public void setUpdated_at(Timestamp updated_at) {
-		this.updated_at = updated_at;
+		this.updatedat = updated_at;
 	}
 	
 	/////////
