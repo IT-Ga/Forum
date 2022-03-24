@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Keylogo from '../SVG/key.svg';
 import Userlogo from '../SVG/user.svg';
 import accSV from '../Service/AccountService';
-import Header from '../Component/HeaderComponent';
+import Header from '../components/HeaderComponent';
 function Login() {
     let navigate=useNavigate();
     const[username,setUsername]=useState("");
@@ -25,7 +25,7 @@ function Login() {
                 console.log(res.data);
                 if(res.data.status!==401){
                     localStorage.setItem("token",res.data.token);
-                    localStorage.setItem("accid",res.data.acc.id);
+                   
                     localStorage.setItem("username",res.data.acc.username);
                     navigate('/home');
                 } else if(res.data.message==="User account is locked"){

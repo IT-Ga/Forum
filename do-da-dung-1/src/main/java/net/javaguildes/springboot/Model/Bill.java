@@ -36,6 +36,10 @@ public class Bill {
 	private Timestamp updatedat;
 	
 	
+	public Bill() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Bill(Account id_buy, Boolean is_bought, Account created_id, Account updated_id, Timestamp created_at,
 			Timestamp deleted_at, Timestamp updated_at) {
 		super();

@@ -42,6 +42,10 @@ public class Bill_info {
 	
 	
 	
+	public Bill_info() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Bill_info( Bill bill_id_belong, Product product_id_bought, long amount_bought, Timestamp time_bought,
 			Account created_id, Account updated_id, Timestamp created_at, Timestamp deleted_at, Timestamp updated_at) {
 		super();

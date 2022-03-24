@@ -48,9 +48,11 @@ public class UserDetailsImpl implements UserDetails{
 
     @Override
     public boolean isAccountNonLocked() { //lay thong tin user co bi khoa ko, neu bi khoa thi ko login vao dc
-        if(user.getIs_blocked()==true)
-            return false;
-        else return true;
+//       if(user.getIs_blocked()==true)
+//            return false; 
+        //else
+        	return true;
+  
     }
 
     @Override

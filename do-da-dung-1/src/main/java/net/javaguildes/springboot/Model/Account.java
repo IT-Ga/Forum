@@ -22,8 +22,8 @@ public class Account {
 	private String password;
 	@ManyToOne(targetEntity = Role.class)
     @JoinColumn(name = "role_id",referencedColumnName = "id")
-	private Role role_id;
-	@Column(nullable = false)
+	private Role roleid;
+	@Column(columnDefinition = "bit(1) default 1")
 	private Boolean isblocked;
 	private String name;
 	private String address;
@@ -47,24 +47,25 @@ public class Account {
 	}
 	
 	
-	public Account( String username, String password, Role role_id, Boolean is_blocked, String name,
-			String address, String phone, String email, Timestamp birthday, Timestamp created_at, Timestamp deleted_at,
-			Timestamp updated_at) {
+
+	
+	public Account(String username, String password, Role roleid, Boolean isblocked, String name, String address,
+			String phone, String email, Timestamp birthday, Timestamp createdat, Timestamp deletedat,
+			Timestamp updatedat) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.role_id = role_id;
-		this.isblocked = is_blocked;
+		this.roleid = roleid;
+		this.isblocked = isblocked;
 		this.name = name;
 		this.address = address;
 		this.phone = phone;
 		this.email = email;
 		this.birthday = birthday;
-		this.createdat = created_at;
-		this.deletedat = deleted_at;
-		this.updatedat = updated_at;
+		this.createdat = createdat;
+		this.deletedat = deletedat;
+		this.updatedat = updatedat;
 	}
-	
 	/////////
 	public long getId() {
 		return id;
@@ -86,10 +87,10 @@ public class Account {
 		this.password = password;
 	}
 	public Role getRole_id() {
-		return role_id;
+		return roleid;
 	}
 	public void setRole_id(Role role_id) {
-		this.role_id = role_id;
+		this.roleid = role_id;
 	}
 	public Boolean getIs_blocked() {
 		return isblocked;

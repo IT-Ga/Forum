@@ -58,6 +58,7 @@ public class AccountService {
                 newAcc.setRole_id(newRole);;
                 newAcc.setPassword(passwordEncoder.encode(newAcc.getPassword()));
                 newAcc.setCreated_at(timeService.getCurrentTimestamp());
+                newAcc.setIs_blocked(false);
                 return ResponseEntity.status(HttpStatus.OK).body(new Response("OK","Da Dang ky thanh cong",accountRepo.save(newAcc)));
             } 
         }

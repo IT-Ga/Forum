@@ -31,6 +31,10 @@ public class Type_product {
 	private Timestamp updatedat;
 	
 	
+	public Type_product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Type_product( String type_name, Account created_id, Account updated_id, Timestamp created_at,
 			Timestamp deleted_at, Timestamp updated_at) {
 		super();

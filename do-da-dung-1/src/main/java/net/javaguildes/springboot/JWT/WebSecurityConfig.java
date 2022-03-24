@@ -18,6 +18,8 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+
+
 @Configuration
 @EnableWebSecurity//Khoi chay spring secutory
 @EnableGlobalMethodSecurity(prePostEnabled = true)//bat tinh nang PreAuthorize cho Controller
@@ -56,7 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests()
+        http.cors().and().csrf().disable().authorizeRequests()
                 .antMatchers("/register").permitAll() //cho phep tat ca truy cap path register va login
                 .antMatchers("/login").permitAll()
                 //nhung path con lai (anyrequest) bat buoc xac thuc

@@ -39,6 +39,10 @@ public class Product {
 	private Timestamp updatedat;
 	
 	
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Product(String product_name, long amount, long price, String image, Boolean status,
 			Type_product typeid_belong, Account created_id, Account updated_id, Timestamp created_at,
 			Timestamp deleted_at, Timestamp updated_at) {

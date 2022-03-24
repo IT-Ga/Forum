@@ -6,8 +6,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
 function HeaderComponent(){
     let navigate=useNavigate;
     const logout=()=>{
-        localStorage.removeItem("token");
-        localStorage.removeItem("accid");
+      
+        localStorage.removeItem("id");
         localStorage.removeItem("username");
         // navigate("/");
     };
@@ -19,7 +19,7 @@ function HeaderComponent(){
                     <button className="navbar-brand btn btn-secondary" style={{marginLeft:"50px"}}>Home</button>
                     <button className="navbar-brand btn btn-secondary">Posts</button>
                     <button className="navbar-brand btn btn-secondary">Approve</button>
-                    <button className="navbar-brand btn btn-danger" style={{marginLeft:"50px"}}>Create your post</button>
+                    <button className="navbar-brand btn btn-danger" style={{marginLeft:"50px"}}>Create your name</button>
                     </div>
                     <div class="row" style={{marginLeft:"20px"}}>
                         <div class="col-auto">
